@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&display=swap');
+
+#titulo__form{
+    margin-top: 45px;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#div__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.form__group{
+    text-align: left;
+    width: 556px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.form__group > label{
+    font-weight: bold;
+}
+
+.form__control{
+    background-color: #D9D9D9;
+    height: 58px;
+}
+
+#username__input{
+    margin-top: 30px;
+    font-weight:200;
+}
+
+#btn__container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+}
+
+.boton{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 80px;
+    max-width: 253px;
+    max-height: 53px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#cancel__btn{
+    width: 253px;
+    height: 53px;
+    background-color: #E75D5D;
+    color: black;
+    font-weight: bold;
+    border: none;
+}
+
+#login__btn{
+    width: 253px;
+    height: 53px;
+    background-color: #003B93;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+#error__message{
+    color: red;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+    padding-right :115px;
+}
+

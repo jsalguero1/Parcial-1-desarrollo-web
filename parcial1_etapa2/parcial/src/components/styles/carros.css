@@ -1,0 +1,31 @@
+#container{
+    display: flex;
+    width: 80%;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+
+.table__container {
+    width: 64%;
+    border-collapse: collapse;
+  }
+  
+  #table__headers__container th {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: left;
+    padding: 10px 15px;
+    text-align: left;
+  }
+  
+  #table__body__container td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+  }
+  
+  
+  #table__data__container:hover {
+    background-color: #ddd;
+  }
+  
