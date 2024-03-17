@@ -32,16 +32,33 @@ function FormComponent() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const staticUsername = 'admin';
-    const staticPassword = 'pass';
-
-    if (username === staticUsername && password === staticPassword) {
-      setIsLoggedIn(true);
-    } else {
-      setError(true);
-    }
+  
+    fetch('http://localhost:3001/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ login: username, password: password }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.success) {
+          setIsLoggedIn(true);
+        } else {
+          setError(true);
+        }
+      })
+      .catch((error) => {
+        console.error('There has been a problem with your fetch operation:', error);
+        setError(true);
+      });
   };
-
+  
   if (isLoggedIn) {
     return <Listado vehicles={vehiclesData} />;
   }
